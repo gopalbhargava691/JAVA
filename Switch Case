@@ -1,0 +1,25 @@
+public class SwitchCase {
+    
+    public static void main(String[] args) {
+        
+        int num1 = 30;
+        switch (num1) {
+            case 10 :
+            System.out.println("case1 satisfied");
+            break;
+            
+            case 20 :
+            System.out.println("case2 satisfied");
+            break;
+            
+            case 30 :
+            System.out.println("case3 satisfied");
+            break;
+            
+            default :
+            System.out.println("This is default block");
+            break;
+        }
+        }
+    
+    }
