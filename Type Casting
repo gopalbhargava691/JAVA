@@ -1,0 +1,32 @@
+Type Casting - 
+
+1. Primitive Type Casting 
+a. Implicit
+b. Explicit 
+
+1.a. Implicit Type Casting - 
+
+public class ImplicitTypeCasting {
+  
+       public static void main(String[] args) {
+           int a = 1;
+           System.out.println(a);
+           double b = a;
+           System.out.println(b);
+           
+       }
+}
+
+1.b. Explicit Type Casting - 
+
+public class ExplicitTypeCasting {
+  
+       public static void main(String[] args) {
+           double a = 1;
+           System.out.println(a);
+           int b = (int)a;
+           System.out.println(b);
+           
+       }
+}
+
