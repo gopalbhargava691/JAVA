@@ -1,0 +1,66 @@
+Both the Programme are for Precedence and written using Declaration - 
+---------------------------------------------------------------------------------------
+public class Precedence {
+    
+    public static void main(String[] args) {
+        int a = 5; 
+        int b = 10;
+        int c = 15;
+        //-----------------
+        int Evaluate1 = a + b * c;
+        int Evaluate2 = a * b + c;
+        int Evaluate3 = a - b * c;
+        int Evaluate4 = a - b + c;
+        //-----------------
+        System.out.println("Value of Evaluate 1 is " + Evaluate1 + "\n");
+        System.out.println("Value of Evaluate 2 is " + Evaluate2 + "\n");
+        System.out.println("Value of Evaluate 3 is " + Evaluate3 + "\n");
+        System.out.println("Value of Evaluate 4 is " + Evaluate4 + "\n");
+    }
+}
+
+---------------------------------------------------------------------------------------
+
+public class Precedence {
+    
+    public static void main(String[] args) {
+        int a = 2; 
+        int b = 5;
+        int c = 2;
+        int d = 3;
+        int e = 25;
+        int f = 30;
+        //-----------------
+        int Evaluate1 = a + b * c;
+        int Evaluate2 = a * b + c;
+        int Evaluate3 = a - b * c;
+        int Evaluate4 = a - b + c;
+        int Evaluate5 = a * b % c;
+        int Evaluate6 = a * b % c / d + e - f; 
+        //-----------------
+        System.out.println("Value of Evaluate 1 is " + Evaluate1 + "\n");
+        System.out.println("Value of Evaluate 2 is " + Evaluate2 + "\n");
+        System.out.println("Value of Evaluate 3 is " + Evaluate3 + "\n");
+        System.out.println("Value of Evaluate 4 is " + Evaluate4 + "\n");
+        System.out.println("Value of Evaluate 5 is " + Evaluate5 + "\n");
+        System.out.println("Value of Evalute 6 is " + Evaluate6);
+    }
+}
+---------------------------------------------------------------------------------------
+The same can be done using Initiallisation i.e., - 
+
+public class Precednece { 
+
+    public static void main(String[] args) {
+        int a = 5; 
+        int b = 10;
+        int c = 15;
+         
+         System.out.println(a*b/c);
+    }
+}
+---------------------------------------------------------------------------------------
+ 
+
+
+
