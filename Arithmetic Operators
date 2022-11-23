@@ -1,0 +1,40 @@
+public class Hello {
+    
+    public static void main(String[] args) {
+        System.out.println("Hello Java" + "\n");
+        System.out.println("Heyy" + "\n");
+        
+        int a;//Declaration
+        a = 5;
+        int b = 6;//Initialization
+        int c = a + b;
+        //-----------------------
+        int A = 11;
+        int B = 1;
+        int C = A - B; 
+        //-----------------------
+        int d = 50;
+        int e = 50;
+        int f = d/e;
+        //-----------------------
+        int D = 5;
+        int E = 5;
+        int F = D*E;
+        //-----------------------
+        int i = 126;
+        int j = 10;
+        int k = i+j;
+        //-----------------------
+        float I = 126.5f;
+        float J = 10.5f;
+        float K = I+J;
+        //-----------------------
+        
+        System.out.println("Addidtion is " + c + "\n");
+        System.out.println("Substraction is " + C + "\n");
+        System.out.println("Division is " + f + "\n");
+        System.out.println("Multiplication is " + F + "\n");
+        System.out.println("Modulus is " + k + "\n");
+        System.out.println("Addition of float is " + K);
+    }
+}
