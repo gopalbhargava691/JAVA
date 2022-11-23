@@ -1,0 +1,30 @@
+public class Inoperator {
+  
+       public static void main(String[] args) {
+           int a = 1;
+           int b = ++a; //PreIncrement
+           int c = 5; 
+           int d = c++; //PostIncrement
+           System.out.println(a);
+           System.out.println(b);
+           System.out.println(c);
+           System.out.println(d);
+           
+       }
+}
+--------------------------------------------------------------
+public class Inoperator {
+  
+       public static void main(String[] args) {
+           int a = 1;
+           int b = --a; //PreDecrement
+           int c = 5; 
+           int d = c--; //PostDecrement
+           System.out.println(a);
+           System.out.println(b);
+           System.out.println(c);
+           System.out.println(d);
+           
+       }
+}
+--------------------------------------------------------------
