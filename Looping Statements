@@ -42,3 +42,9 @@ public class LoopingStatements {
     }
 }
 ---------------------------------------------------
+
+1. Statements inside the body of the loop gets executed;
+2. Value increment;
+3. Condition checking;
+4. If condition true, go to step 1;
+5. If condition false, the flow goes outside the loop;
