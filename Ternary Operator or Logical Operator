@@ -11,3 +11,18 @@ public class TernaryOperator {
             System.out.println("Largest no. is " + greater);
     }
 }
+----------------------------------------------------------------------
+public class TernaryOperator {
+    
+    public static void main(String[] args) {
+        int n1 = 1;
+        int n2 = 2;
+        int n3 = 3;
+        
+        //condition ? expression1 to be executed if condition true : expression2
+        
+        int greater = (n1 > n2) ? ((n1 >= n3)) ? n1 : n3 : ((n2 >= n3)) ? n2 : n3;
+            System.out.println("Largest no. is " + greater);
+    }
+}
+----------------------------------------------------------------------
