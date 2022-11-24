@@ -1,0 +1,14 @@
+public class Ifelseifelse {
+    
+    public static void main (String[] args) {
+        int a = 10;
+        if (a >= 1) {
+            System.out.println("If condition satisfied");
+        } else if (a < 1) {
+            System.out.println("Elseif condition satisfied");
+        } else {
+            System.out.println("None of the condition satisfied");
+        }
+            
+        }
+    }
