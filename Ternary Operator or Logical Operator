@@ -1,0 +1,13 @@
+public class TernaryOperator {
+    
+    public static void main(String[] args) {
+        int num1 = 3;
+        int num2 = 1;
+        int num3 = 2;
+        
+        //condition ? expression1 to be executed if condition true : expression2
+        
+        int greater = (num1 > num2 && num1 > num3) ? num1 : (num2 > num1 && num2 > num3) ? num2 : num3;
+            System.out.println("Largest no. is " + greater);
+    }
+}
