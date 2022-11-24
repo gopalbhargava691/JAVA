@@ -1,0 +1,54 @@
+Logical Operator - 
+
+AND - && 
+
+public class LogicalOperator {
+    
+    public static void main (String[] args) {
+        int a = 5;
+        int b = 10;
+        if (a > 0 && b > 5) {
+            System.out.println("Logical AND Verified");
+        } else {
+            System.out.println("None of the condition satisfied");
+        }
+            
+        }
+    }
+
+---------------------------------------------
+
+OR - ||
+
+public class LogicalOperator {
+    
+    public static void main (String[] args) {
+        int a = 0;
+        int b = 10;
+        if (a > 0 || b > 5) {
+            System.out.println("Logical OR Verified");
+        } else {
+            System.out.println("None of the condition satisfied");
+        }
+            
+        }
+    }
+
+----------------------------------------------
+
+AND OR Both - && || Both 
+
+public class LogicalOperator {
+    
+    public static void main (String[] args) {
+        int a = 3;
+        int b = 10;
+        if (a > 2 && b > 5) {
+            System.out.println("Logical AND Verified");
+        }if (a > 0 || b < 5)  {
+            System.out.println("Logical OR Verified");
+        }
+            
+        }
+    }
+-----------------------------------------------
