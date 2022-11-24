@@ -1,0 +1,12 @@
+public class LoopingStatements {
+    
+    public static void main (String[] args) {
+        
+        String s = "Vijay Dinanath Chauhan";
+        
+        System.out.println(s.length());
+        System.out.println(s.charAt(6)); //Index no will be 0 then 1,2,3 
+        System.out.println(s.toLowerCase());
+        System.out.println(s.toUpperCase());
+    }
+}    
