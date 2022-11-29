@@ -1,0 +1,24 @@
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
+
+public class Exercise {
+    public static void main (String[] args) throws ParseException {
+        
+        Date d = new Date();
+        System.out.println(d); //Gives current date in JAVA Format 
+        
+        //Date formating into our required format 
+        SimpleDateFormat sdf = new SimpleDateFormat ("dd/MM/yy"); //It should be capital MM 
+        String str = sdf.format(d);
+        
+        System.out.println(str); 
+        
+        //Parsing date into JAVA's Format 
+        String a = "28/11/2022";
+        System.out.println(a);
+        Date d1 = sdf.parse(a);
+        System.out.println(d1);
+        
+    }
+}
