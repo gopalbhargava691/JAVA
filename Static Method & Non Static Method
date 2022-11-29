@@ -1,0 +1,39 @@
+Static - 
+
+public class Method {
+    public static void main(String[] args) {
+        
+        int n = 2;
+        int m = 3;
+        
+        int value = Method.sum(n,m);
+        System.out.println(value);
+    }
+     public static int sum(int a, int b){
+         return a+b;
+     }
+
+}
+
+
+----------------------------------------------------
+Non Static OR Instance - 
+
+
+public class Method {
+    public static void main(String[] args) {
+        
+        int n = 2;
+        int m = 3;
+        
+        Method obj = new Method(); //Creating object of method class 
+        int value = obj.sum(n,m);  //Function method calling 
+        System.out.println(value);
+    }   // Instance methods are methods which require an object of its class to be created before it can be called.
+        public int sum(int a, int b){
+        return a+b;
+        }
+
+}
+
+
