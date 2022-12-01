@@ -1,0 +1,58 @@
+public class EncapsulationEx {
+    
+    private String fname = "Ram"; //ram
+    private String lname = "XYZ";
+    private int id = 123;
+        
+    public String getFname(){ //getter method - return type 
+        return fname;//ram
+    }
+    
+    public void setFname (String fname){ //setter method
+        this.fname = fname;
+    }
+    
+    public String getlname(){
+        return lname;
+    }
+    
+    public void setlname(String lname){ //setter method
+        this.lname = lname;
+    }
+    
+    public int getid(){
+        return id;//1
+    }
+
+    public void setid(int id){
+        this.id = id;
+    }
+
+}
+
+-------------------------------------
+
+public class EncapsulationEx {
+    
+   public static void main (String[] args){
+       
+       EncapsulationEx en = new EncapsulationEx();
+       
+    en.setFname("Ram");
+    en.setLname("XYZ");
+    en.setId(1);
+    
+    String fname = en.getFname();
+    System.out.println(fname);
+    
+    String lname = en.getLname();
+    System.out.println(lname);
+    
+    int id = en.getId();
+    System.out.println(id);
+       
+   }
+
+}
+
+
