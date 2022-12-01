@@ -1,0 +1,47 @@
+public class ConsA {
+    
+    private String Fname;
+    private String Lname;
+    private int id;
+    
+    public String get Fname() {
+        return Fname;
+    }
+    public String  get Lname() {
+        return Lname;
+    }
+    public int get id() {
+        return id;
+    }
+    
+    //Parameterized Constructor
+    public ConsA(String fname, String lname, int id) {
+        
+        this.Fname = Fname;//Trapti
+        this.Lname = Lname;
+        this.id = id;
+    }
+    //Default Constructor 
+    public ConsA() {
+        super();
+        System.out.println("This is Default Constructor");
+    }
+    
+}
+----------------------------------------------
+public class TestConsA {
+    
+    public static void main(String[] args) {
+        
+        ConsA c1 = new ConsA ("Trapti", "Bhagat", 1);
+        
+        String Fn = c1.get Fname(); //Trapti
+        System.out.println(Fn);
+        
+        String Ln = c1.get Lname();
+        System.out.println(Ln);
+        
+        int id = c1.get id();
+        System.out.println(id);
+    }
+}
