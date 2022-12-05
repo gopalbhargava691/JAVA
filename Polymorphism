@@ -1,0 +1,62 @@
+Polymorphism - 
+
+1. Compile time polymorphism OR Static Or Overloading - 
+
+public class MethodOverloading {
+    
+    public static void main (String[] args) {
+        
+        display(1);
+        display(1, 4);
+        display("Hey", "see", "this");
+    }
+    
+    private static void display(int s) {
+        System.out.println("Arguments : " + s);
+    }
+    
+    private static void display(int i, int j) {
+        System.out.println("Arguments : " + i + " & " + j);
+    }
+    
+    private static void display(String s, String t, String u) {
+        System.out.println ("Arguments : " + s + " " + t + " " + u);
+    }
+}
+---------------------------------------------
+
+2. Run Time Polymorphism Or Dynamic Or Overriding - 
+
+a. Parent Class - 
+
+public class Parent {
+    public void show() {
+        System.out.println("Parent");
+    }
+}
+
+b. Child Class - 
+
+public class Child extends Parent {
+    
+    @Override 
+    public void show() {
+        
+        Super.show();
+        System.out.println("Child");
+    }
+}
+
+C. Test Class - 
+
+public class TestChild {
+    
+    public static void main(String[] args) {
+        
+       Parent obj1 = new Parent();
+       obj1.show();
+       
+       Parent obj2 = new Child();
+       obj2.show();
+    }
+}
