@@ -1,0 +1,171 @@
+Inheritance - 
+
+It is a mechanism in which one object acquires all the properties and behaviors of a parent object.
+
+There are 3 types of Inheritance - 
+A. Single Level Inheritance;
+B. Multi Level Inheritance;
+C. Hierarchical Inheritance; 
+
+-------------------------------------------------------
+
+Here we have used single level and hierarchy inheritance - 
+
+public class ShapeInherit {
+    
+    private String color;
+    private int bw;
+    private int side;
+    
+    public int getSide() {
+        return side;
+    }
+    
+    public void setSide(int side) {
+        this.side = side;
+    }
+    
+    public String getColor() {
+        return color;
+    }
+    
+    public int getBw() {
+        return bw;
+    }
+    
+    public void setBw(int bw) {
+        this.bw = bw;
+    }
+    
+    @Override 
+    public String toString() {
+        return color + " " + bw + " " + side;
+    }
+}
+----------------------------------------------------------
+
+Circle - 
+
+public class CircleEx extends ShapeInheri {
+    private double radius;//2
+    
+    public double getRadius() {
+        return radius; 
+    }
+    
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+    
+    public double area() {
+        return 3.14 * radius * radius;
+    }
+    
+}
+--------------------------------------------
+
+Rectangle - 
+
+public class RectangleEx extends ShapeInheri {
+    private double length;
+    private double width;
+    
+    public double getLength() { 
+        return length;
+    }
+    
+    public void setLength(double length) {
+        this.length = length;
+    }
+    
+    public double getWidth() { 
+        return width;
+    }
+    
+    public void setWidth(double width){
+        this.width = width;
+    }
+    
+    public double area() {
+        return length * width;
+    }
+    
+}
+-------------------------------------
+
+Triangle - 
+
+public class TriangleEx extends ShapeInheri {
+    private int base;
+    private int height;
+    
+    public int getBase() {
+        return base;
+    }
+    
+    public void setBase(int base) {
+        this.base = base;
+    }
+    
+    public int getHeight() {
+        return height;
+    }
+    
+    public void setHeight(int height) {
+        this.height = height;
+    }
+    
+    public double area() {
+        return 0.5 * base * height;
+    }
+    
+}
+--------------------------------------------------
+
+Test Method - 
+
+public class TestShapeInheri {
+    
+    public static void main(String[] args) {
+    
+    CircleEx c = new CircleEx();
+    TriangleEx t = new TriangleEx();
+    RectangleEx r = new RectangleEx();
+    
+    c.setColor("red");
+    String color = c.getColor();
+    System.out.println("Color of Circle is " + color);
+    
+    //Parent class can keep reference of child class
+    ShapeInheri s = new CircleEx();
+    
+    //CircleEx c1 = (CircleEx) new ShapeInheri();
+    
+    //System.out.println(s.getColor());
+    
+    c.setRadius(2);
+    
+    double d = c.area();
+    
+    System.out.print("Radius of Circle is " + c.getRadius());
+    System.out.println("Area of Circle is " + d);
+    
+    r.setLength(12);
+    r.setWidth(10);
+    double d1 = r.area();
+    
+    System.out.println("Length of rectangle is " + r.getLength());
+    System.out.println(r.getwidth());
+    System.out.println(d1);
+    
+    t.setBase(6);
+    t.setHeight(2);
+    double d2 = t.area();
+    
+    System.out.println(t.getBase());
+    System.out.println(t.getHeight());
+    System.out.println(d2);
+    
+    
+    }
+}
