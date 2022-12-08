@@ -1,0 +1,62 @@
+Exceptional Hnadling - 
+
+1. Try 
+2. Catch 
+3. Throw
+4. Throws
+5. Finally 
+
+*************Try/Catch/Finally*************
+
+public class ExceptionHandlingEx {
+
+ public static void main(String[] args) {
+    
+    int i = 0;
+    int j = 15;
+    
+    try {
+        int value = j / i;
+        System.out.println(value);
+        
+    } catch (Exception e) {
+     //a   System.out.println("Divided by Zero is not defined");
+     //b   e.printStackTrace();
+     //c   System.out.println(e.getMessage());
+    } finally {
+        System.out.println("Finally Block");
+    }
+    
+ }
+ 
+}
+-----------------------------------------
+
+Multiple Catch Exception - 
+
+public class ExceptionHandlingEx {
+
+ public static void main(String[] args) {
+    
+    String name = "Vijay"; //null; 
+    
+    try {
+        System.out.println(name.length());
+        System.out.println(name.charAt(6));
+        
+    } catch (StringIndexOutOfBoundsException e) {
+        System.out.println("String Length is small");
+        e.printStackTrace();
+    
+    } catch (NullPointerException e) {
+        System.out.println("Null data or Empty data");
+        e.printStackTrace();
+        
+    } finally {
+        System.out.println("Finally Block");
+    }
+    
+ }
+ 
+}
+-----------------------------------------
