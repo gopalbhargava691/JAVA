@@ -1,0 +1,194 @@
+public class ExceptionHandlingEx {
+    public static void main(String[] args) {
+        
+        Collection c = new ArrayList();
+        
+        //Add elements into collection -
+        c.add("Bura mat dekho");//Index 0
+        c.add("Bura mat bolo");//Index 1
+        c.add("Bura mat suno");//Index 2
+        
+        System.out.println("Length of collection: " + c.size());
+        
+        //Print all elements of a collection -
+        for(Object ele:c) {
+            System.out.println(ele);
+        }
+        //Convert collection to Array - 
+        Object[] arr = c.toArray();
+        
+        //Print all elements to Array -
+        for(Object ele:arr){
+            String s = ele.toString();
+            System.out.println(s);
+        }
+    }
+}
+----------------------------------------------------------------------
+**************Array List************************
+
+GETTING ERROR IN THIS - 
+
+import java.util.ArrayList;
+import java.utilIterator;
+
+public class ArrayList {
+    public static void main(String[] args) {
+        
+        //Simple code to read elements kept inside an array list 
+        ArrayList a = new ArrayList();
+        
+        a.add("One");
+        a.add("Two");
+        a.add("Three");
+        a.add("Four");
+        
+        //System.out.println(a);
+        
+        int size = a.size();
+        System.out.println("Size:" + size);
+        
+        for (int i=0; i<a.size(); i++) {
+            System.out.println(i + ":" + a.get(i));
+        }
+        for (Object obj : a) {
+            System.out.println(obj); 
+        }
+        Integer i = new Integer(4);
+        a.add(i);
+        System.out.println(a);
+        
+        ArrayList sublist = new ArrayList(a.sublist(0,2));
+        System.out.println(sublist); 
+        
+        ArrayList l = new ArrayList();
+        
+        l.add("One");
+        l.add("Two");
+        l.add("Three");
+        
+        l.add(6);
+        l.add(7);
+        
+        System.out.println(l.get(3));
+        System.out.println(l.get(4));
+        //System.out.println(l.get(3) + l.get(4)); //Not Possible 
+        
+        Integer i = (Integer l.get(3));
+        Integer j = (Integer l.get(4));
+        
+        System.out.println(i+j);
+        
+        ArrayList v = new ArrayList();
+        
+        v.add("Ram");
+        v.add("Aman");
+        v.add("786");
+        v.add("5.93");
+        v.add("I am good");
+        v.add("Why?");
+        
+        System.out.println(v);
+        
+        Iterator it = v.iterator();
+        while (it.hasNext()) {
+            Object o = it.next();
+            System.out.println(o);
+        }
+    }
+    
+}
+
+ERROR FREE - 
+
+import java.util.Iterator;
+import java.util.ArrayList;
+
+public class ArrayLis {
+    public static void main(String[] args) {
+        
+        //Simple code to read elements kept inside an array list 
+        ArrayList a = new ArrayList();
+        
+        a.add("One");
+        a.add("Two");
+        a.add("Three");
+        a.add("Four");
+        
+        //System.out.println(a);
+        
+        int size = a.size();
+        System.out.println("Size:" + size);
+        
+        for (int i=0; i < a.size(); i++) {
+            System.out.println(i + ":" + a.get(i));
+        }
+        for (Object obj : a) {
+            System.out.println(obj); 
+        }
+        Integer b = new Integer(4);
+        a.add(b);
+        System.out.println(a);
+        
+        ArrayList sublist = new ArrayList(a.subList(0,2));
+        System.out.println(sublist); 
+        
+        ArrayList l = new ArrayList();
+        
+        l.add("One");
+        l.add("Two");
+        l.add("Three");
+        
+        l.add(6);
+        l.add(7);
+        
+        System.out.println(l.get(3));
+        System.out.println(l.get(4));
+        //System.out.println(l.get(3) + l.get(4)); //Not Possible 
+        
+        Integer i = (Integer)l.get(3);
+        Integer j = (Integer)l.get(4);
+        
+        System.out.println(i+j);
+        
+        ArrayList v = new ArrayList();
+        
+        v.add("Ram");
+        v.add("Aman");
+        v.add("786");
+        v.add("5.93");
+        v.add("I am good");
+        v.add("Why?");
+        
+        System.out.println(v);
+        
+        Iterator it = v.iterator();
+        
+        while (it.hasNext()) {
+            Object o = it.next();
+            System.out.println(o);
+        }
+    }
+    
+}
+----------------------------------------------------------------------------
+***************Linked List*********************
+
+import java.util.LinkedList;
+
+public class LinkedListEx {
+    public static void main(String[] args) {
+        
+        LinkedList l = new LinkedList();
+        
+        l.add("One");
+        l.add("Two");
+        l.add("Three");
+        
+        for(Object o:l) {
+            System.out.println(o);
+        }
+        System.out.println(l.isEmpty());
+    }
+    
+}
