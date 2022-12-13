@@ -77,3 +77,40 @@ public class DequeEx {
         
     }
 }
+
+----------------------------------------------------------------
+***************************PriorityQueue***************************
+
+import java.util.Iterator;
+import java.util.Queue;
+import java.util.LinkedList;
+import java.util.Deque;
+import java.util.ArrayDeque;
+import java.util.PriorityQueue;
+
+public class PriorityQueueEx {
+    public static void main(String[] args) {
+        
+        Queue q = new PriorityQueue();
+        
+        //Add element 
+        q.add("One");
+        q.add("Two");
+        q.add("Three");
+        
+        //Examine top element 
+        Object ele = q.element();
+        
+        //Remove top element 
+        ele = q.remove();
+        System.out.println(ele);
+        System.out.println(q);
+        
+        Iterator it = q.iterator();
+        while (it.hasNext()) {
+            Object o = it.next();
+            System.out.println(o);
+        }
+    }
+}
+
