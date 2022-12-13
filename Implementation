@@ -36,7 +36,7 @@ public class VectorEx {
 ----------------------------
 *************Stack**********
 
-import java.util.iterator
+import java.util.iterator;
 
 public class StackEx{ //LIFO
     public static void main (String[] args) {
