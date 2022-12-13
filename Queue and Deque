@@ -1,0 +1,79 @@
+***************************QUEUE***************************
+
+import java.util.Iterator;
+import java.util.Queue;
+import java.util.LinkedList;
+
+public class QueueEx {
+    public static void main(String[] args) {
+        
+        Queue q = new LinkedList();
+        
+        //q.add(null); - It gives runtime exception - nullpointer exception (We can't add null values in queue)
+    
+        //Adds element {0,1,2,3,4} to queue - 
+        
+        for (int i=0; i<5; i++) {
+            q.add(i);
+        }
+        //Display contents of the queue -
+        System.out.println("Emelments of the queue " + q);
+        
+        //To remove the head of th queue - 
+        int removedEle = (int) q.remove();
+        System.out.println("Removed Emelments of the queue " + removedEle);
+        
+        System.out.println(q);
+        
+        //To view the head of the queue - 
+        int head = (int) q.peek();
+        System.out.println("Head of the queue is " + head);
+        
+        //Rest all menthod of collection interface like size and contains can be used with this implementation 
+        int size = q.size();
+        System.out.println("Size of queue is " + size);
+        
+        Iterator it = q.iterator();
+        while(it.hasNext()) {
+            Object o = it.next();
+            System.out.println(o + " ");
+        }
+    }
+}
+----------------------------------------------------------------
+***************************Deque***************************
+
+import java.util.Iterator;
+import java.util.Queue;
+import java.util.LinkedList;
+import java.util.Deque;
+import java.util.ArrayDeque;
+
+public class DequeEx {
+    public static void main(String[] args) {
+        
+        ArrayDeque q =new ArrayDeque();
+        
+        q.add("One");
+        q.add("Two");
+        q.add("Three");
+        q.addFirst("First");
+        q.addLast("Last");
+        
+        System.out.println(q);
+        
+        Object ele = q.element();
+        ele = q.remove(); //Remove top element
+        System.out.println(ele);
+        System.out.println(q);
+        
+        ele = q.removeFirst(); //Remove top element 
+        System.out.println(ele);
+        System.out.println(q);
+        
+        ele = q.removeLast(); //Remove last element 
+        System.out.println(ele);
+        System.out.println(q);
+        
+    }
+}
