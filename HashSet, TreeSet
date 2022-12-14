@@ -1,0 +1,71 @@
+*********************HASHMAP*******************
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.Collection;
+
+
+public class HashMapEx {
+    public static void main(String[] args) {
+        
+       HashMap map = new HashMap ();
+       
+       map.put("1","One");
+       map.put(null,"Zero");
+       map.put("0",null);
+       map.put(null,null);
+       map.put("5","Three");
+       map.put("1","One");
+       map.put("3","Two");
+       
+       System.out.println(map);
+       
+       String val = (String) map.get("1");
+       System.out.println(val);
+       //map.remove("4");
+       
+       Set keys = map.keySet();
+       for (Object k:keys) {
+           System.out.println(k);
+       }
+       
+       Collection vals = map.values();
+       for (Object v:vals) {
+           System.out.println(v);
+       }
+       
+       Set keyValue = map.entrySet();
+       for (Object ele:keyValue) {
+           Map.Entry pair = (Map.Entry) ele;
+           System.out.println(pair.getKey() + "-" + pair.getValue());
+       }
+    }
+}
+--------------------------------------------
+*********************TREEMAP*********************
+
+import java.util.TreeMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.Collection;
+
+
+public class TreeMapEx {
+    public static void main(String[] args) {
+        
+       TreeMap map = new TreeMap ();
+       
+       map.put("101","One");
+       map.put("103","Three");
+       map.put("105","Five");
+       map.put("102","Two");
+       map.put("104","Four");
+       
+       //map.put(null,"Four");
+       
+       for (Object o:map.keySet()) {
+           //System.out.println(map.get(o));
+           System.out.println(o + "=" + map.get(o));
+       }
+    }
+}
