@@ -67,7 +67,7 @@ public class DequeEx {
         System.out.println(ele);
         System.out.println(q);
         
-        ele = q.removeFirst(); //Remove top element 
+        ele = q.removeFirst(); //Remove first element 
         System.out.println(ele);
         System.out.println(q);
         
