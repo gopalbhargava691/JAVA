@@ -1,0 +1,56 @@
+import java.util.Iterator;
+import java.util.Vector;
+import java.util.Enumeration;
+import java.util.LinkedList;
+
+public class Marksheet implements Comparable<Marksheet> {
+        
+    public String rollNo;
+    public String name;
+    public int marks;
+    
+    public Marksheet(String rollNo, String name, int marks) {
+        super();
+        this.rollNo = rollNo;
+        this.name = name;
+        this.marks = marks;
+    }
+        
+    @Override 
+    public String toString() {
+        return "Marksheet [rollNo=" + rollNo + ", name" + name + ", marks=" + marks + "]";
+    }
+    
+    @Override
+    public int compareTo(Marksheet m) {
+        
+        return rollNo.compareTo(m.rollNo);
+    }
+}
+
+-------------------------------------------
+import java.util.Iterator;
+import java.util.Collections;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.ArrayList;
+
+
+public class MarksheetTest {
+    public static void main(String[] args) {
+        
+    ArrayList marksheets = new ArrayList();
+    //Marksheetm = new Marksheet(rollNo, name, marks)
+    marksheets.add(new Marksheet("A4", "Ram", 89));//m1
+    marksheets.add(new Marksheet("A2", "Shyam", 90));//m2
+    marksheets.add(new Marksheet("A3", "Mohan", 80));//m3
+    
+    //Sorts elements by comparable
+    Collections.sort(marksheets); 
+    
+    //Print all Elements 
+    for (Object o : marksheets) {
+        System.out.println(o);
+    }   
+    }   
+}
