@@ -1,3 +1,5 @@
+*********************COMPARABLE**************************
+
 import java.util.Iterator;
 import java.util.Vector;
 import java.util.Enumeration;
@@ -54,3 +56,75 @@ public class MarksheetTest {
     }   
     }   
 }
+
+-------------------------------------------
+*********************COMPARATOR**************************
+import java.util.Comparator; 
+
+
+//Compare markesheet by name in Ascending order 
+public class OrderByName implements Comparator<Marksheets> {
+    
+    @Override
+    public int compare(Marksheet n1, Marksheet n2){
+        return n1.Name.compareTo(n2.name);
+    }
+}
+
+----------
+
+import java.util.Comparator; 
+
+
+//Sorting elemetns in Descending order 
+public class OrderByMarks implements Comparator<Marksheet> {
+    
+    @Override
+    public int Compare(Marksheet n1, Marksheet n2) {
+        if (n1.marks>n2.marks) {
+            return -1;
+        } else if (n1.marks == n2.marks) {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
+}
+----------------------
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+
+public class TestMarksheetSorting {
+    public static void main (String[] args) {
+        
+        ArrayList marksheets = new ArrayList();
+        
+        //Marksheet m = new Marksheet(rollNo,name,marks)
+        
+        marksheets.add(new Marksheet("A4","Ram",89));//n1
+        marksheets.add(new Marksheet("A2","Shyam",90));//n2
+        marksheets.add(new Marksheet("A3","Mohan",80));//n3
+        
+        //Sort elements by name
+        OrderByName cName = new OrderByName();
+        Collections.sort(marksheets, cName);
+        
+        //Print all Elements 
+        for (Object o:marksheets) {
+            System.out.println(o);
+        }
+        //Sort elements by marks
+        OrderByMarks cMarks = new OrderByMarks();
+        Collections.sort(marksheets, cMarks);
+        
+        System.out.println("-----------");
+        
+        //Print all Elements 
+        for (Object o:marksheets) {
+            System.out.println(o);
+        }    
+    }
+}
+-----------------------------------------
