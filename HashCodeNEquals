@@ -1,0 +1,64 @@
+public class HashCodeNEquals implements Comparable<HashCodeNEquals> {
+    
+    public String rollNo;
+    
+    public String name;
+    
+    public int marks;
+    
+    public HashCodeNEquals(String rollNo, String name, int marks) {
+
+        this.rollNo = rollNo;
+        this.name = name;
+        this.marks = marks; 
+    }
+    
+    @Override 
+    public boolean equals(Object o) {
+        
+        if (o == null)
+            return false;
+            
+        if (!(o instanceof HashCodeNEquals))
+            return false;
+        HashCodeNEquals other = (HashCodeNEquals) o;
+        return this.rollNo.equals(other.rollNo);
+        
+    }
+    
+    @Override 
+    public int hashCode() {
+        return rollNo.hashCode();
+    }
+    
+    @Override
+    public String toString() {
+        return rollNo + "," + name + "," + marks;
+    }
+    
+    public int compareTo(HashCodeNEquals o) {
+        return rollNo.compareTo(o.rollNo);
+    }
+    } 
+}
+--------------------------
+public class HashCodeNEqualsTest {  
+
+public static void main(String[] args) {
+    
+    HashCodeNEquals h1 = new HashCodeNEquals("A1", "Shreya", 95);
+    
+    HashCodeNEquals h2 = new HashCodeNEquals("A1", "Sayna", 91);
+    
+    System.out.println(h1.hashCode());
+    System.out.println(h2.hashCode());
+    
+    if (h1.hashCode() == h2.hashCode()) {
+        if (h1.equals(h2)) {
+            System.out.println("both are same");
+        }
+    } else {
+         System.out.println("both object not same");
+    }
+}
+}
