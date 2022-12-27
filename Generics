@@ -1,0 +1,34 @@
+//T is a type variable that will be replaced by a type class when object of this 
+//class is created 
+
+public class Data<T> {
+    T Value; //Declares an object of T type 
+    
+    public Data(T val) {//passes parameter of type T
+    Value = val;
+    }
+    T getvalue() {//Returns value of type T
+    return value;
+    }
+    
+    void show Type() {//shows data type of stored object
+    system.out.println("Type of T is " + value.getclass().getName());
+    }
+}
+-------------------------------------
+public class DataTest {
+    
+    public static void main(String[] args) {
+        Data<Integer> i = new Data<Integer>(100);
+        i.showtype();
+        
+        int v = i.getvalue();
+        System.out.println("Value" + v);
+        
+        Data<String> str = new Data<String>("Vijay");
+        str.showtype();
+        
+        String val = str.getvalue();
+        System.out.println("Value " + val);
+    }
+}
