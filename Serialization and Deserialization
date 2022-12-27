@@ -78,7 +78,7 @@ public class TestDeSerialization {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         
         FileInput Stream file = new FileInput Stream("F:\\object.ser");
-	    ObjectInput Stream in = new ObjectInput Stream(file);
+	ObjectInput Stream in = new ObjectInput Stream(file);
 
         Marksheet m = (Marksheet) in.readobject();
         
