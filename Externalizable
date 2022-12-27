@@ -1,0 +1,102 @@
+import java.io.Externalizable;
+
+public class ExternalizableEx implements Externalizable { 
+    
+    transient int temp;
+    String name;
+    int Maths;
+    int Physics;
+    int Chemistry;
+    
+    public string getName() {
+        return name;
+    }
+    
+    public void setName(String name) {
+        this.name=name;
+    }
+    
+    public int getMaths() {
+        return maths;
+    }
+    
+    public void setMaths(int maths) {
+        this.maths = maths;
+    }
+    
+    public int getPhysics() {
+        return physics;
+    }
+    
+    public void setPhysics(int physics) {
+        this.physics = physics;
+    }
+    
+    public int getChemistry() {
+        return chemistry;
+    }
+    
+    public void setChemistry(int chemistry) {
+        this.chemistry = chemistry;
+    }
+    
+    @Override
+    public void readExternal (ObjectInput in) throws IOException, ClassNotFoundException {
+        name=(String) in.readObject();
+        physics=in.readInt();
+        chemistry=in.readInt();
+        maths=in.readInt();
+        temp=in.readInt();//Deserialize transient variable 
+    }
+    
+    @Override 
+    public void writeExternal (ObjectOutput out) throws IOException {
+        out.writeObject(name);
+        out.writeInt(Physics);
+        out.writeInt(Chemistry);
+        out.writeInt(Maths);
+        out.writeInt(temp);//Serialize transient variable 
+    }
+}
+------------------------------
+
+***********TestExternalizableSer***************
+
+public static void main(String[] args) throws IOException {
+    
+    FileOutput Stream out = new ObjectOutput stream(file);
+    ExternalizableEx ext = new ExternalizableEx();
+    
+    ext.setName("Ram");
+    ext.setName(96);
+    ext.setName(90);
+    ext.setName(40);
+    ext.setName(750);
+    out.writeObject(ext);
+    
+    out.close();
+    file.close();
+    System.out.println("Done");
+}
+------------------------------
+
+***********TestExternalizableDese***************
+
+import java.io.Externalizable;
+
+public static void main(String[] args) throws IOException, ClassNotFoundException {
+    
+    FileInputStream file = new FileInputStream("F:\\object9.ser");
+    ObjectInputStream in = new ObjectInputStream(file);
+    
+    ExternalizableEx ext = (ExternalizableEx) in.readObject();
+    
+    System.out.println("Name :" + ext.getName());
+    System.out.println("Maths :" + ext.getMaths());
+    System.out.println("Physics :" + ext.getPhysics());
+    System.out.println("Chemistry :" + ext.getChemistry());
+    System.out.println("TempValue :" + ext.getTempValue());
+    
+    in.close();
+    file.close();
+}
