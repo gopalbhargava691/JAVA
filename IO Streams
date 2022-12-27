@@ -1,0 +1,144 @@
+*********************READ*********************
+
+1.) Read Text
+2.) Read by Line 
+
+1.) Read Text 
+
+import java.io.FileReader;
+import java.io.IOException;
+
+public class ReadText {
+    
+    public static void main(String[] args) throws IOException {
+    
+    FileReader in = new FileReader("F:/four.txt"); //File location
+    
+    int ch = in.read(); //here read is not file name 
+    while (ch != -1) {
+        System.out.println((char) ch);
+        ch = in.read();
+        }
+        in.close();
+    }
+}
+--------------------------------------
+
+2.) Read by Line 
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.BufferedReader;
+
+public class ReadLbyl {//read line by line 
+    
+    public static void main(String[] args) throws IOException {
+    
+    FileReader file = new FileReader("F:/four.txt"); //File location  
+    BufferedReader in = new BufferedReader(file);
+    
+    String line = in.readLine();
+    //System.out.println(line);
+    
+    while (line != null) {
+        System.out.println(line);
+        line = in.readLine();
+        }
+        in.close();
+        file.close();
+    }
+}
+-----------------------------------------
+
+*********************WRITE*********************
+
+1.) Write Text
+2.) Write by Line 
+3.) Binary Data
+
+1.) Write Text 
+
+import java.util.FileWriter;
+
+public class WriteText { 
+    
+    public static void main(String[] args) throws IOException {
+    
+    FileWriter out = new FileWriter("F:/four.txt"); //File location  
+    
+    out.write('A');
+    out.write('\n');
+    out.write("This is line one.");
+    out.write('\n');
+    out.write("This is line two.");
+    out.close();
+    System.out.println("check G:/four.txt");
+    }
+}
+---------------------------------
+
+2.) Write by Line 
+
+import java.util.FileWriter;
+
+public class Writebyl { 
+    
+    public static void main(String[] args) throws IOException {
+    
+    FileWriter out = new FileWriter("F:/four.txt"); //File location
+    PrintWriter pw = new PrintWriter(out);
+    
+    for (int i=0; i<5; i++) {
+        pw.println(i+ ":line");
+    }
+    pw.close();
+    out.close();
+    
+    System.out.println("Check file four!");
+    }
+}
+----------------------------
+
+3.) Binary Data
+
+public static void main(String[] args) throws IOException {
+    
+    String source = "G:/blackbg3.jpg";
+    String target = "G:/blackbg4.jpg";
+    
+    FileInputStream in = new FileInputStream(Source);
+    FileOutputStream out = new FileOutputStream(Target);
+    
+    int ch = in.read();
+    while (ch!=-1) {
+        out.write(ch);
+        ch = in.read();
+    }
+    in.close();
+    out.close();
+    System.out.println(Source + "is copied to" + target);
+    }
+-------------------------------------------
+
+******************SCANNER***********************
+
+public static void main(String[] args) throws IOException {
+    
+    FileReader reader = new FileReader("G:/read.txt");
+    Scanner sc = new Scanner(reader);
+    //Part a start 
+    while(sc.hasNext())  {
+        System.out.println(sc.nextLine());
+    }
+    reader.close();
+    sc.close();
+    //Part a over
+    //Part b start 
+    
+    Scanner myObj = new Scanner(system.in); //create a scanner object 
+    System.out.println("Enter Username");
+    
+    String userName = myObj.nextLine();//Read UserInput
+    System.out.println("Username is:" + userName);//Ouput user Input 
+    }
+---------------------------------------
