@@ -1,0 +1,91 @@
+A.) Marksheet Class -
+
+import java.io.Serializable;
+
+public class Marksheet implements Serializable {
+    
+    String name;
+    int Maths;
+    int Physics;
+    int Chemistry;
+    
+    private transient String tempValue;
+    
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String name) {
+        this.name=name;
+    }
+    
+    public int getMaths() {
+        return maths;
+    }
+    
+    public void setMaths(int maths) {
+        this.maths = maths;
+    }
+    
+    public int getPhysics() {
+        return physics;
+    }
+    
+    public void setPhysics(int physics) {
+        this.physics = physics;
+    }
+    
+    public int getChemistry() {
+        return chemistry;
+    }
+    
+    public void setChemistry(int chemistry) {
+        this.chemistry = chemistry;
+    }
+    
+    
+}
+
+-------------------------------------
+
+B.) Test Serializable - 
+
+public class TestSerializable {
+    public static void main(String[] args) throws IOException {
+        
+        FileOutput Stream file = new FileOutput Stream("F:\\object1.ser");
+        ObjectOutput Stream file = new ObjectOutput Stream(file);
+
+        Marksheet m = new Marksheet();
+        
+        m.setName("Ram");
+        m.setMaths(95);
+        m.setPhysics(90);
+        m.setChemistry(80);
+        m.settempValue("786");
+        
+        Out.writeObject(m);
+        System.out.println("Done")
+
+    }
+}
+
+-----------------------------
+
+C.) Test DeSerializable - 
+
+public class TestDeSerialization {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
+        
+        FileInput Stream file = new FileInput Stream(file);
+
+        Marksheet m = (Marksheet) in.readobject();
+        
+        System.out.println("Name: " + m.getName());
+        System.out.println("Maths: " + m.getMaths());
+        System.out.println("Physics: " + m.getPhysics());
+        System.out.println("Chemistry: " + m.getChemistry());
+        System.out.println("TempValue: " + m.getTempValue());
+    }
+}
+-----------------------------------
